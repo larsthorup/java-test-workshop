@@ -1,5 +1,7 @@
 # java-test-workshop
 
+Install Java SE JDK and add bin folder to PATH
+
     mkdir out
     javac -d out src/Location.java
     javac -d out -cp out;libs/junit-4.12.jar;libs/hamcrest-core-1.3.jar test/LocationTest.java

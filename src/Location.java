@@ -7,18 +7,12 @@ public class Location {
     public String City;
 
     public String toDisplayString() {
-        if (CountryCode == "US")
-        {
+        if (CountryCode.equals("US")) {
             return City + ", " + Region;
-        }
-        else
-        {
-            if (City == null || City == "")
-            {
+        } else {
+            if (City == null || City.equals("")) {
                 return Country;
-            }
-            else
-            {
+            } else {
                 return City + ", " + Country;
             }
         }
