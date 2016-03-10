@@ -2,7 +2,7 @@ package com.zealake.workshop;
 
 import org.junit.Test;
 
-import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertThat;
 
 public class LocationTest {
@@ -14,7 +14,7 @@ public class LocationTest {
         location.CountryCode = "US";
         location.Region = "California";
         location.City = "San Francisco";
-        assertThat(location.toDisplayString(), is("San Francisco, California"));
+        assertThat(location.toDisplayString(), equalTo("San Francisco, California"));
     }
 
     @Test
@@ -25,7 +25,7 @@ public class LocationTest {
         location.Country = "Denmark";
         location.Region = "Hovedstaden";
         location.City = "Farum";
-        assertThat(location.toDisplayString(), is("Farum, Denmark"));
+        assertThat(location.toDisplayString(), equalTo("Farum, Denmark"));
     }
 
     @Test
@@ -34,7 +34,7 @@ public class LocationTest {
         Location location = new Location();
         location.CountryCode = "PH";
         location.Country = "Philippines";
-        assertThat(location.toDisplayString(), is("Philippines"));
+        assertThat(location.toDisplayString(), equalTo("Philippines"));
     }
 
 }
